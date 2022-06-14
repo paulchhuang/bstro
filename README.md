@@ -1,1 +1,1 @@
-# bstro
+# BSTRO: Body-Scene contact TRansfOrmer
