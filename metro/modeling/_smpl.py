@@ -59,12 +59,12 @@ class SMPL(nn.Module):
         self.J = None
         self.R = None
         
-        J_regressor_extra = torch.from_numpy(np.load(cfg.JOINT_REGRESSOR_TRAIN_EXTRA)).float()
-        self.register_buffer('J_regressor_extra', J_regressor_extra)
-        self.joints_idx = cfg.JOINTS_IDX
+        # J_regressor_extra = torch.from_numpy(np.load(cfg.JOINT_REGRESSOR_TRAIN_EXTRA)).float()
+        # self.register_buffer('J_regressor_extra', J_regressor_extra)
+        # self.joints_idx = cfg.JOINTS_IDX
 
-        J_regressor_h36m_correct = torch.from_numpy(np.load(cfg.JOINT_REGRESSOR_H36M_correct)).float()
-        self.register_buffer('J_regressor_h36m_correct', J_regressor_h36m_correct)
+        # J_regressor_h36m_correct = torch.from_numpy(np.load(cfg.JOINT_REGRESSOR_H36M_correct)).float()
+        # self.register_buffer('J_regressor_h36m_correct', J_regressor_h36m_correct)
 
 
     def forward(self, pose, beta):
