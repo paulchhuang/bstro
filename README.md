@@ -1,6 +1,6 @@
 # BSTRO: Body-Scene contact TRansfOrmer
 
-This is the repo. of [Capturing and Inferring Dense Full-BodyHuman-Scene Contact](https://rich.is.tue.mpg.de/index.html). 
+This is the code repository for [Capturing and Inferring Dense Full-BodyHuman-Scene Contact](https://rich.is.tue.mpg.de/index.html). 
 
 Body-Scene contact TRansfOrmer (BSTRO) is a transformer-based method that detects human-scene contact directly from pixels. In this repository, we provide the inference code of BSTRO.
 
