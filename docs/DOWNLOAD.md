@@ -38,12 +38,11 @@
     |-- ... 
     ``` -->
 
-3. Download SMPL and MANO models
+3. Download SMPL models
 
     To run our code smoothly, please visit the following websites to download SMPL and MANO models. 
 
-    - Download `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` from [SMPLify](http://smplify.is.tue.mpg.de/), and place it at `${REPO_DIR}/metro/modeling/data`.
-    - Download `MANO_RIGHT.pkl` from [MANO](https://mano.is.tue.mpg.de/), and place it at `${REPO_DIR}/metro/modeling/data`.
+    - Download `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` from [SMPLify](http://smplify.is.tue.mpg.de/), and place it under `${REPO_DIR}/metro/modeling/data`.
 
     Please put the downloaded files under the `${REPO_DIR}/metro/modeling/data` directory. The data structure should follow the hierarchy below. 
     ```
@@ -52,7 +51,6 @@
     |   |-- modeling
     |   |   |-- data
     |   |   |   |-- basicModel_neutral_lbs_10_207_0_v1.0.0.pkl
-    |   |   |   |-- MANO_RIGHT.pkl
     |-- models
     |-- datasets
     |-- predictions
@@ -62,16 +60,7 @@
     ```
     Please check [/metro/modeling/data/README.md](../metro/modeling/data/README.md) for further details.
 
-4. Download prediction files that were evaluated on FreiHAND Leaderboard.
-
-    The prediction files can be downloaded with the following command.
-    ```bash
-    cd $REPO_DIR
-    bash scripts/download_preds.sh
-    ```
-    You could submit the prediction files to FreiHAND Leaderboard and reproduce our results.
-
-5. Download datasets and pseudo labels for training.
+<!-- 5. Download datasets and pseudo labels for training.
 
     We recommend to download large files with **AzCopy** for faster speed.
     AzCopy executable tools can be downloaded [here](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#download-azcopy). Decompress the azcopy tar file and put the executable in any path. 
@@ -153,4 +142,4 @@
     |-- ... 
     |-- ... 
 
-    ```
+    ``` -->
