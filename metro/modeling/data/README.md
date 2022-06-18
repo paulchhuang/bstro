@@ -4,11 +4,11 @@ Adapted from open source project [GraphCMR](https://github.com/nkolot/GraphCMR/)
 
 Our code requires additional data to run smoothly. 
 
-<!-- ### J_regressor_extra.npy
+### J_regressor_extra.npy
 Joints regressor for joints or landmarks that are not included in the standard set of SMPL joints.
 
 ### J_regressor_h36m_correct.npy
-Joints regressor reflecting the Human3.6M joints.  -->
+Joints regressor reflecting the Human3.6M joints. 
 
 ### mesh_downsampling.npz
 Extra file with precomputed downsampling for the SMPL body mesh.
