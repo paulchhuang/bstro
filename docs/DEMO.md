@@ -33,7 +33,7 @@ Note that BSTRO focuses on estimating *contact*, not poses or shapes. The T-pose
 
  - **This demo doesn't perform human detection**. Our model requires a centered target in the image. 
  - As **BSTRO is a data-driven approach**, it may not perform well if the test samples are very different from the training data. 
- - **BSTRO considers the SMPL mesh topology**. 
+ - **BSTRO considers the SMPL mesh topology**. It needs vertex correspondences to transfer the results to other body meshes, e.g., SMPL-X, GHUM. 
 
 
 
