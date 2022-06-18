@@ -11,7 +11,7 @@ Body-Scene contact TRansfOrmer (BSTRO) is a transformer-based method that detect
 ## Installation
 Check [INSTALL.md](docs/INSTALL.md) for installation instructions.
 
-## Model Zoo and Download
+## Pre-trained models and other required files
 Please download our pre-trained weights from the [website](https://rich.is.tue.mpg.de/index.html) and follow [DOWNLOAD.md](docs/DOWNLOAD.md) to prepare other relevant files that are important to run our code. 
 
 ## Quick demo
