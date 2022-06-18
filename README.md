@@ -38,9 +38,11 @@ month_numeric = {6}
 ```
 
 
-## License
+## [TBD] License
 
-Our research code is released under the MIT license. See [LICENSE](LICENSE) for details. 
+Our research code is released under the MPI license. See [LICENSE](https://rich.is.tue.mpg.de/license.html) for details.
+
+METRO has MIT license. See [LICENSE](https://github.com/microsoft/MeshTransformer/blob/main/LICENSE) for details. 
 
 We use [huggingface/transformers](https://github.com/huggingface/transformers) submodule. Please see [NOTICE](NOTICE.md) for details. 
 
@@ -56,3 +58,9 @@ Our implementation and experiments are built on top of open-source GitHub reposi
 [HRNet/HRNet-Image-Classification](https://github.com/HRNet/HRNet-Image-Classification) 
 
 [nkolot/GraphCMR](https://github.com/nkolot/GraphCMR) 
+
+## Contact
+
+For questions, please contact rich@tue.mpg.de
+
+For commercial licensing (and all related questions for business applications), please contact ps-licensing@tue.mpg.de.
