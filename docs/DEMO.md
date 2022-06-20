@@ -10,7 +10,7 @@ This demo runs 3D human-scene contact detection from a single image.
 Our codes require the input images that are already **cropped with the person centered** in the image. The input images can have arbitrary size and the demo code scales it to `224x224`. 
 Check `./samples/body-scene-contact/sample1.jpg` for example. 
 
-To run the demo, please place your test images under , and then run the following script.
+To run the following script for demo:
 
 
 ```bash
