@@ -12,6 +12,11 @@ from .modeling_bert import BertPreTrainedModel, BertEmbeddings, BertEncoder, Ber
 from .modeling_bert import BertLayerNorm as LayerNormClass
 import metro.modeling.data.config as cfg
 
+"""
+The following two classes are borrowed from the METRO repo:
+https://github.com/microsoft/MeshTransformer/blob/main/metro/modeling/bert/modeling_metro.py
+"""
+
 class METRO_Encoder(BertPreTrainedModel):
     def __init__(self, config):
         super(METRO_Encoder, self).__init__(config)
@@ -105,6 +110,39 @@ class METRO_Encoder(BertPreTrainedModel):
             outputs = outputs + (all_attentions,)
 
         return outputs
+
+class METRO(BertPreTrainedModel):
+    '''
+    The archtecture of a transformer encoder block we used in METRO
+    '''
+    def __init__(self, config):
+        super(METRO, self).__init__(config)
+        self.config = config
+        self.bert = METRO_Encoder(config)
+        self.cls_head = nn.Linear(config.hidden_size, self.config.output_feature_dim)
+        self.residual = nn.Linear(config.img_feature_dim, self.config.output_feature_dim)
+        self.apply(self.init_weights)
+
+    def forward(self, img_feats, input_ids=None, token_type_ids=None, attention_mask=None, masked_lm_labels=None,
+            next_sentence_label=None, position_ids=None, head_mask=None):
+        '''
+        # self.bert has three outputs
+        # predictions[0]: output tokens
+        # predictions[1]: all_hidden_states, if enable "self.config.output_hidden_states"
+        # predictions[2]: attentions, if enable "self.config.output_attentions"
+        '''
+        predictions = self.bert(img_feats=img_feats, input_ids=input_ids, position_ids=position_ids, token_type_ids=token_type_ids,
+                            attention_mask=attention_mask, head_mask=head_mask)
+
+        # We use "self.cls_head" to perform dimensionality reduction. We don't use it for classification.
+        pred_score = self.cls_head(predictions[0])
+        res_img_feats = self.residual(img_feats)
+        pred_score = pred_score + res_img_feats
+
+        if self.config.output_attentions and self.config.output_hidden_states:
+            return pred_score, predictions[1], predictions[-1]
+        else:
+            return pred_score
 
 class BSTRO_BodyHSC_Network(torch.nn.Module):
     '''
