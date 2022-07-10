@@ -25,7 +25,7 @@ python ./metro/tools/demo_bstro.py
 ```
 After running, it will generate the results in the folder `./demo`. `input.jpg` is the input image in `224x224` size (as a sanity check); `contact_vis.obj` is a body mesh in T-pose where vertices in contact with the scene are in red color:
 
- <img src="../docs/res_vis.png" width="500"> 
+ <img src="../docs/res_vis_1.png" width="500"> 
 
 Note that BSTRO focuses on estimating *contact*, not poses or shapes. The T-posed mesh is only for visualization purposes. 
 
