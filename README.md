@@ -7,6 +7,8 @@ Body-Scene contact TRansfOrmer (BSTRO) is a transformer-based method that detect
 
  <img src="docs/example_results.gif" width="650"> 
 
+### TODO items
+- [ ] Release training and validation code (coming soon)
 
 ## Installation
 Check [INSTALL.md](docs/INSTALL.md) for installation instructions.
@@ -36,7 +38,7 @@ month_numeric = {6}
 ```
 
 
-## [TBD] License
+## License
 
 Our research code is released under the MPI license. See [LICENSE](https://rich.is.tue.mpg.de/license.html) for details.
 
