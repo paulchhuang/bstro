@@ -20,15 +20,6 @@ pip install pytorch==1.4.0 torchvision==0.5.0
 
 export INSTALL_DIR=$PWD
 
-# Install apex
-cd $INSTALL_DIR
-git clone https://github.com/NVIDIA/apex.git
-cd apex
-python setup.py install --cuda_ext --cpp_ext
-
-# Install OpenDR
-pip install opendr matplotlib
-
 # Install METRO
 cd $INSTALL_DIR
 git clone --recursive https://github.com/paulchhuang/bstro.git
