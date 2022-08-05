@@ -10,14 +10,14 @@
 
 2. Download pretrained models.
 
-    Download the pre-trained weights from the [website](https://rich.is.tue.mpg.de/index.html) and place it under `models/bstro`.
+    First, download the pre-trained weights from the [website](https://rich.is.tue.mpg.de/index.html) and place it under `models/bstro`.
 
-    <!-- Second, run the following script.
+    Second, run the following script.
     ```bash
     cd $REPO_DIR
     bash scripts/download_models.sh
     ```
-    The scripts will download three models that are trained for mesh reconstruction on Human3.6M, 3DPW, and FreiHAND, respectively. For your convenience, this script will also download HRNet pre-trained weights, which will be used in training. 
+    The scripts will download the pretrained METRO models that are trained for mesh reconstruction on 3DPW. For your convenience, this script will also download HRNet pre-trained weights, which will be used in training. 
 
     The resulting data structure should follow the hierarchy as below. 
     ```
@@ -36,7 +36,7 @@
     |-- README.md 
     |-- ... 
     |-- ... 
-    ``` -->
+    ``` 
 
 3. Download SMPL models
 
