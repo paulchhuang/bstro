@@ -40,7 +40,7 @@
 
 3. Download SMPL models
 
-    To run our code smoothly, please visit the following websites to download SMPL and MANO models. 
+    To run our code smoothly, please visit the following websites to download SMPL models. 
 
     - Download `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` from [SMPLify](http://smplify.is.tue.mpg.de/), and place it under `${REPO_DIR}/metro/modeling/data`.
 
