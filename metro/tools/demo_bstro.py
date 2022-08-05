@@ -105,6 +105,8 @@ def run_inference(args, BSTRO_model, smpl, mesh_sampler):
             for _, mesh in enumerate(pred_contact_meshes):
                 temp_fname = foldername + f'/contact_vis.obj'
                 mesh.export(temp_fname)
+
+            print(f'results are visualized in {temp_fname}.')
     return
 
 
