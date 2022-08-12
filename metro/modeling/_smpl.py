@@ -71,7 +71,7 @@ class SMPL(nn.Module):
         device = pose.device
         batch_size = pose.shape[0]
         v_template = self.v_template[None, :]
-        shapedirs = self.shapedirs.view(-1,10)[None, :].expand(batch_size, -1, -1)
+        shapedirs = self.shapedirs[:,:,:10].view(-1,10)[None, :].expand(batch_size, -1, -1)
         beta = beta[:, :, None]
         v_shaped = torch.matmul(shapedirs, beta).view(-1, 6890, 3) + v_template
         # batched sparse matmul not supported in pytorch
