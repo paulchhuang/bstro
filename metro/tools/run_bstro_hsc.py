@@ -288,7 +288,6 @@ def run_eval_general(args, val_dataloader, METRO_model, smpl, mesh_sampler):
 
     val_mPVE, val_count, val_precision, val_recall, val_f1, val_fp_error, val_fn_error  = run_evaluation(args, val_dataloader, 
                                                                                             METRO_model, 
-                                                                                            epoch, 
                                                                                             smpl,
                                                                                             mesh_sampler)
 
@@ -395,7 +394,7 @@ def run_validate(args, val_loader, METRO_model, epoch, smpl, mesh_sampler):
 
     return val_mPVE, val_count, val_precision, val_recall, val_f1, val_fp_error, val_fn_error
 
-def run_evaluation(args, val_loader, METRO_model, epoch, smpl, mesh_sampler):
+def run_evaluation(args, val_loader, METRO_model, smpl, mesh_sampler):
     batch_time = AverageMeter()
     mPVE = AverageMeter()
     precision = AverageMeter()
