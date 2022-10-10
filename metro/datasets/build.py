@@ -9,16 +9,7 @@ import os.path as op
 import torch
 import logging
 from metro.utils.comm import get_world_size
-from metro.datasets.human_mesh_tsv import (MeshTSVYamlDataset, MeshHSIYamlDataset)
-
-
-def build_dataset(yaml_file, args, is_train=True, scale_factor=1):
-    print(yaml_file)
-    if not op.isfile(yaml_file):
-        yaml_file = op.join(args.data_dir, yaml_file)
-        # code.interact(local=locals())
-        assert op.isfile(yaml_file)
-    return MeshTSVYamlDataset(yaml_file, is_train, False, scale_factor)
+from metro.datasets.human_mesh_tsv import MeshHSIYamlDataset 
 
 def build_hsi_dataset(yaml_file, args, is_train=True, scale_factor=1):
     print(yaml_file)
@@ -82,10 +73,9 @@ def make_data_sampler(dataset, shuffle, distributed):
 def make_data_loader(args, yaml_file, is_distributed=True, 
         is_train=True, start_iter=0, scale_factor=1, hsi_flag=False):
 
-    if hsi_flag:
-        dataset = build_hsi_dataset(yaml_file, args, is_train=is_train, scale_factor=scale_factor)
-    else:
-        dataset = build_dataset(yaml_file, args, is_train=is_train, scale_factor=scale_factor)
+    
+    dataset = build_hsi_dataset(yaml_file, args, is_train=is_train, scale_factor=scale_factor)
+    
     logger = logging.getLogger(__name__)
     if is_train==True:
         shuffle = True
