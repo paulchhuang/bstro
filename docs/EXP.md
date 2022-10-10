@@ -1,6 +1,6 @@
 # Training
 
-1. Download the `tsv databases for train/val/test` and `geodesic dist. matrix` from the [RICH website](https://rich.is.tue.mpg.de/download.php). Unzip the zip file and place them under `dataset` folder following the structure below.
+1. Download the `tsv databases for train/val/test` and `geodesic dist. matrix` from the [RICH website](https://rich.is.tue.mpg.de/download.php). Unzip the zip file and place them under `datasets` folder following the structure below.
     ```
     ${REPO_DIR}  
     |-- models  
