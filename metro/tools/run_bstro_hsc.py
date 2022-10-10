@@ -311,7 +311,7 @@ def run_validate(args, val_loader, METRO_model, epoch, smpl, mesh_sampler):
     METRO_model.eval()
     smpl.eval()
 
-    dist_matrix = np.load('/ps/project/common/tuch/geodesics/smpl/smpl_neutral_geodesic_dist.npy')
+    dist_matrix = np.load('datasets/smpl_neutral_geodesic_dist.npy')
     dist_matrix = torch.tensor(dist_matrix).cuda()
     with torch.no_grad():
         # end = time.time()
@@ -412,7 +412,7 @@ def run_evaluation(args, val_loader, METRO_model, smpl, mesh_sampler):
             lines = f.readlines()
         seqs = set([line.strip().split('\t')[0] for line in lines])
 
-    dist_matrix = np.load('/ps/project/common/tuch/geodesics/smpl/smpl_neutral_geodesic_dist.npy')
+    dist_matrix = np.load('datasets/smpl_neutral_geodesic_dist.npy')
     dist_matrix = torch.tensor(dist_matrix).cuda()
     with torch.no_grad():
         # end = time.time()
