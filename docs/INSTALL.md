@@ -16,7 +16,7 @@ python3 -m venv PATH/2/VENV
 source PATH/2/VENV/bin/activate
 
 # Install Pytorch
-pip install pytorch==1.4.0 torchvision==0.5.0 
+pip install torch==1.4.0 torchvision==0.5.0 
 
 export INSTALL_DIR=$PWD
 
