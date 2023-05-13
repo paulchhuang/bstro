@@ -19,7 +19,7 @@ python ./metro/tools/demo_bstro.py
        --num_attention_heads 4 
        --input_feat_dim 2051,512,128 
        --hidden_feat_dim 1024,256,128 
-       --input_img samples/body-scene-contact/sample4.png
+       --input_img samples/body-scene-contact/sample4.jpg
        --output_dir ./demo 
        --resume_checkpoint models/bstro/hsi_hrnet_3dpw_b32_checkpoint_15.bin
 ```
